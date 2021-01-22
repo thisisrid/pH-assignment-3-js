@@ -2,12 +2,17 @@
 //KM to METER converter
 function kilometerToMeter(num){
     if(num<0){
-        return "Sorry Sir! Give Me any positive value"
+        return "Sorry! Lenght is always in Possitive "
     }
-    else{
+    else if( num >= 0){
         return num*1000;
     }
+    else{
+        return "Sorry Sir! Make a sense!"
+    }
 }
+
+
 //Budget Calculator
 function budgetCalculator(watch, mobile, laptop){
     if(watch < 0 || mobile < 0 || laptop < 0){
@@ -22,7 +27,7 @@ function budgetCalculator(watch, mobile, laptop){
 }
 
 
-//Hotel Cost
+//Hotel Cost Calculation
 function hotelCost(day){
     var totalCost=0;
     if(day < 0 || day == 0){
@@ -32,19 +37,40 @@ function hotelCost(day){
         if(day <= 10){
             totalCost = day*100;
                 }
-                else if (day <= 20){
+        else if (day <= 20){
             var firstTenDay = 10*100;
             var remainingDay = day - 10;
             var extraDay = remainingDay*80;
             totalCost = firstTenDay + extraDay;
                 }
-                else{
+        else{
             var firstTenDay = 10*100;
             var secondTenDay = 10*80;
             var remainingDay = day - 20;
             var extraDay = remainingDay*50;
-            totalCost = firstTenDay +secondTenDay+ extraDay;
+            totalCost = firstTenDay + secondTenDay+ extraDay;
                 }
-            return totalCost;
+        return totalCost;
     }
 }
+
+
+//Who is Bigger -Mega Friend
+var arr = ['Taulk', 'Jhaal', 'Mishti'] ;
+function megaFriend(arr){
+    var nameLength = 0;
+    var longestName;
+    for (var i = 0; i < arr.length;i++) { 
+        if (arr[i] != String){
+            return "Sorry Sir! Make a Sense!"
+        }
+        else if (arr[i].length > nameLength) { 
+                    nameLength = arr[i].length; 
+                    longestName = arr[i]; 
+                 }
+                } 
+            return longestName; 
+        }
+
+
+
