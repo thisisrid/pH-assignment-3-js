@@ -60,17 +60,12 @@ var arr = ['Taulk', 'Jhaal', 'Mishti'] ;
 function megaFriend(arr){
     var nameLength = 0;
     var longestName;
-    for (var i = 0; i < arr.length;i++) { 
-        if (arr[i] != String){
-            return "Sorry Sir! Make a Sense!"
-        }
-        else if (arr[i].length > nameLength) { 
+    for (var i = 0; i < arr.length; i++) { 
+        if (arr[i].length > nameLength) { 
                     nameLength = arr[i].length; 
                     longestName = arr[i]; 
                  }
                 } 
             return longestName; 
         }
-
-
 
